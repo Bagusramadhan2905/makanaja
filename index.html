@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katering Nusantara</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; }
+    .hero { background: url('https://source.unsplash.com/1600x600/?catering,food') center/cover no-repeat; height: 500px; color: white; display: flex; align-items: center; justify-content: center; }
+    .hero h1 { font-size: 3rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.6); }
+    .menu-card img { height: 200px; object-fit: cover; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Makan Aja</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#paket">Paket Acara</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="text-center">
+    <h1>Nikmati Hidangan Lezat Setiap Hari</h1>
+    <p class="lead">Layanan katering terpercaya untuk segala kebutuhan Anda</p>
+  </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Menu Harian</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card menu-card">
+          <img src="ayam racing.jpg" class="card-img-top" alt="Makan Siang">
+          <div class="card-body">
+            <h5 class="card-title">Paket Makan Siang</h5>
+            <p class="card-text">Mulai dari Rp25.000/porsi. Menu berganti setiap hari.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card menu-card">
+          <img src="salat sayur.jpg"   class="card-img-top" alt="Diet Sehat">
+          <div class="card-body">
+            <h5 class="card-title">Menu Diet Sehat</h5>
+            <p class="card-text">Pilihan rendah kalori dan seimbang untuk Anda yang peduli kesehatan.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card menu-card">
+          <img src="ayam racing.jpg" class="card-img-top" alt="Makanan Anak">
+          <div class="card-body">
+            <h5 class="card-title">Makanan Anak & Bayi</h5>
+            <p class="card-text">Menu khusus anak-anak dan bayi yang bergizi dan lezat.</p>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu Lainnya</a></li>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paket Acara Section -->
+<section id="paket" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Paket Acara</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Paket Nasi Box</h4>
+        <p>Ideal untuk meeting, seminar, dan acara keluarga. Harga mulai Rp30.000/paket.</p>
+      </div>
+      <div class="col-md-6">
+        <h4>Prasmanan & Tumpeng</h4>
+        <p>Untuk ulang tahun, aqiqah, hingga pernikahan. Tersedia berbagai varian menu nusantara.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Kontak Section -->
+<section id="kontak" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Hubungi Kami</h2>
+    <form>
+      <div class="mb-3">
+        <label for="nama" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="nama" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="pesan" class="form-label">Pesan</label>
+        <textarea class="form-control" id="pesan" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Kirim</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4 bg-dark text-light">
+  <p>&copy; 2025 Katering Nusantara. Semua hak dilindungi.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
