@@ -1,15 +1,143 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Katering Nusantara</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MakanAja Catering Mahasiswa</title>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; }
-    .hero { background: url('https://source.unsplash.com/1600x600/?catering,food') center/cover no-repeat; height: 500px; color: white; display: flex; align-items: center; justify-content: center; }
-    .hero h1 { font-size: 3rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.6); }
-    .menu-card img { height: 200px; object-fit: cover; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fff7ed;
+      color: #333;
+    }
+    header {
+      background: #ffe8cc;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      color: #f97316;
+      font-size: 2.8em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #555;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      text-decoration: none;
+      color: #f97316;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ea580c;
+    }
+
+    .section {
+      padding: 40px 20px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h2 {
+      color: #ea580c;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #f97316;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .benefit {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .benefit span {
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 40px 20px;
+    }
+
+    .cta button {
+      background-color: #f97316;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1em;
+      border-radius: 9999px;
+      cursor: pointer;
+    }
+
+    .cta button:hover {
+      background-color: #ea580c;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    li {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #ffedd5;
+      font-size: 0.9em;
+      color: #555;
+    }
   </style>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2EMBNHF209"></script>
@@ -23,115 +151,134 @@
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">Makan Aja</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-        <li class="nav-item"><a class="nav-link" href="#paket">Paket Acara</a></li>
-        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
-      </ul>
+  <header>
+    <h1>MakanAja</h1>
+    <p>Mau makan enak tanpa ribet dan tetap hemat? "Makan Aja" hadir sebagai solusi catering khusus anak kos yang siap memenuhi kebutuhan makan harianmu! Hidup jadi lebih praktis, hemat waktu, dan tetap bisa makan enak tanpa boros!
+Hidup sebagai anak kost bukan berarti harus berteman terus dengan mie instan atau makanan cepat saji. Di MAKAN AJA, kami hadir untuk menjawab kebutuhan makan harianmu dengan menu yang lezat, bergizi, dan ramah di kantong.</p>
+  </header>
+
+  <nav>
+    <a href="#paket">Paket</a>
+    <a href="#kenapa">Kenapa MakanAja?</a>
+    <a href="#menu">Menu</a>
+    <a href="#pesan">Pesan</a>
+  </nav>
+
+  <section id="paket" class="section">
+  <h2 class="section-title">🎁 Pilihan Paket</h2>
+  <div class="card-grid">
+
+    <a href="harian.html" style="text-decoration: none;">
+      <div class="card">
+        <h2>Paket Harian</h2>
+        <p>Mulai dari Rp10.000 per porsi. Menu berganti setiap hari dan selalu fresh!</p>
+      </div>
+    </a>
+
+    <a href="mingguan.html" style="text-decoration: none;">
+      <div class="card">
+        <h2>Paket Mingguan</h2>
+        <p>Rp60.000 per minggu, cocok untuk mahasiswa yang ingin hemat & praktis!</p>
+      </div>
+    </a>
+
+    <a href="sahabat.html" style="text-decoration: none;">
+      <div class="card">
+        <h2>Paket Sahabat</h2>
+        <p>Rp90.000 untuk 2 orang/minggu. Lebih hemat kalau barengan!</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+  <section id="kenapa" class="section">
+    <h2 class="section-title">💡 Kenapa Pilih MakanAja?</h2>
+    <div class="benefits">
+      <div class="benefit"><span>Harga Super Hemat</span></div>
+      <div class="benefit"><span>Menu Variatif & Bergizi</span></div>
+      <div class="benefit"><span>Gratis Ongkir Area Kampus</span></div>
     </div>
-  </div>
-</nav>
+  </section>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="text-center">
-    <h1>Nikmati Hidangan Lezat Setiap Hari</h1>
-    <p class="lead">Layanan katering terpercaya untuk segala kebutuhan Anda</p>
-  </div>
+ <section id="menu" class="section" style="font-family: Arial, sans-serif; padding: 20px;">
+  <h2 class="section-title">📖 Menu Lengkap</h2>
+
+  <h3>🍱 Menu Harian</h3>
+  <ul class="menu-harian" style="list-style: none; padding: 0;">
+    <li style="margin-bottom: 25px;">
+      <strong>Senin:</strong> Nasi Ayam Geprek + Sayur Asem<br>
+      <img src="geprek.jpeg" alt="Nasi Ayam Geprek" style="width: 200px; margin-top: 8px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    </li>
+    <li style="margin-bottom: 25px;">
+      <strong>Selasa:</strong> Nasi Telur Balado + Capcay<br>
+      <img src="balado.jpeg" alt="Nasi Telur Balado" style="width: 200px; margin-top: 8px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    </li>
+    <li style="margin-bottom: 25px;">
+      <strong>Rabu:</strong> Nasi Ayam Kecap + Tumis Kangkung<br>
+      <img src="ayam kecap.jpeg" alt="Nasi Ayam Kecap" style="width: 200px; margin-top: 8px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    </li>
+    <li style="margin-bottom: 25px;">
+      <strong>Kamis:</strong> Nasi Ikan Goreng + Sambal + Urap<br>
+      <img src="ikan goreng.jpg" alt="Nasi Ikan Goreng" style="width: 200px; margin-top: 8px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    </li>
+    <li style="margin-bottom: 25px;">
+      <strong>Jumat:</strong> Nasi Ayam Krispi + Acar + Saus<br>
+      <img src="krispi.jpeg" alt="Nasi Ayam Krispi" style="width: 200px; margin-top: 8px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    </li>
+  </ul>
+
+ <h3 style="margin-top: 40px;">📆 Menu Mingguan</h3>
+  <ul style="list-style: none; padding: 0;">
+    <li style="margin-bottom: 25px;">
+      <strong>Minggu 1:</strong> Ayam Teriyaki, Tahu Tempe, Sayur Bening, Buah<br>
+      <img src="ayam teriyaki.jpeg" alt="Menu Minggu 1" style="width: 200px; margin-top: 8px; border-radius: 10px;">
+    </li>
+    <li style="margin-bottom: 25px;">
+      <strong>Minggu 2:</strong> Telur Dadar, Ayam Rica-Rica, Orak Arik, Pisang<br>
+      <img src="dadar.jpg" alt="Menu Minggu 2" style="width: 200px; margin-top: 8px; border-radius: 10px;">
+    </li>
+    <li style="margin-bottom: 25px;">
+      <strong>Minggu 3:</strong> Nasi Goreng Spesial, Nugget, Salad Buah<br>
+      <img src="nasgor.jpeg" alt="Menu Minggu 3" style="width: 200px; margin-top: 8px; border-radius: 10px;">
+    </li>
+    <li style="margin-bottom: 25px;">
+      <strong>Minggu 4:</strong> Soto Ayam, Perkedel Kentang, Jeruk<br>
+      <img src="soto.jpeg" alt="Menu Minggu 4" style="width: 200px; margin-top: 8px; border-radius: 10px;">
+    </li>
+  </ul>
+
+  <!-- Paket Sahabat -->
+  <h3 style="margin-top: 40px;">👬 Paket Sahabat (2 Orang)</h3>
+  <ul style="list-style: none; padding: 0;">
+    <li style="margin-bottom: 25px;">
+      Ayam Bakar + Nasi + Sambal + Tahu Tempe (2 porsi)<br>
+      <img src="ayam bakar.jpeg" alt="Paket Ayam Bakar" style="width: 200px; margin-top: 8px; border-radius: 10px;">
+    </li>
+    <li style="margin-bottom: 25px;">
+      Mie Goreng Jawa + Telur Ceplok + Acar (2 porsi)<br>
+      <img src="bakmie.jpeg" alt="Paket Mie Goreng" style="width: 200px; margin-top: 8px; border-radius: 10px;">
+    </li>
+    <li style="margin-bottom: 25px;">
+      Nasi Kuning + Ayam Suwir + Kentang Balado + Telur (2 porsi)<br>
+      <img src="nasi kuning.jpeg" alt="Paket Nasi Kuning" style="width: 200px; margin-top: 8px; border-radius: 10px;">
+    </li>
+    <li style="margin-bottom: 25px;">
+      Nasi Uduk + Ikan Asin + Sayur + Kerupuk (2 porsi)<br>
+      <img src="nasi uduk.jpeg" alt="Paket Nasi Uduk" style="width: 200px; margin-top: 8px; border-radius: 10px;">
+    </li>
+  </ul>
 </section>
 
-<!-- Menu Section -->
-<section id="menu" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Menu Harian</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card menu-card">
-          <img src="ayam racing.jpg" class="card-img-top" alt="Makan Siang">
-          <div class="card-body">
-            <h5 class="card-title">Paket Makan Siang</h5>
-            <p class="card-text">Mulai dari Rp25.000/porsi. Menu berganti setiap hari.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card menu-card">
-          <img src="salat sayur.jpg"   class="card-img-top" alt="Diet Sehat">
-          <div class="card-body">
-            <h5 class="card-title">Menu Diet Sehat</h5>
-            <p class="card-text">Pilihan rendah kalori dan seimbang untuk Anda yang peduli kesehatan.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card menu-card">
-          <img src="ayam racing.jpg" class="card-img-top" alt="Makanan Anak">
-          <div class="card-body">
-            <h5 class="card-title">Makanan top</h5>
-            <p class="card-text">Menu khusus anak-anak dan bayi yang bergizi dan lezat.</p>
-            <li class="nav-item"><a class="nav-link" href="menu.html">Menu Lainnya</a></li>
-          
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <section id="pesan" class="cta">
+    <h2 class="section-title">Yuk Langganan Sekarang!</h2>
+    <button onclick="window.location.href='https://wa.me/6281234567890?text=Halo%20MakanAja%2C%20saya%20ingin%20pesan%20catering!'">Pesan via WhatsApp</button>
+  </section>
 
+  <footer>
+    &copy; 2025 MakanAja Catering. All rights reserved.
+  </footer>
 
-<!-- Paket Acara Section -->
-<section id="paket" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-4">Paket Acara</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <h4>Paket Nasi Box</h4>
-        <p>Ideal untuk meeting, seminar, dan acara keluarga. Harga mulai Rp30.000/paket.</p>
-      </div>
-      <div class="col-md-6">
-        <h4>Prasmanan & Tumpeng</h4>
-        <p>Untuk ulang tahun, aqiqah, hingga pernikahan. Tersedia berbagai varian menu nusantara.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Kontak Section -->
-<section id="kontak" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Hubungi Kami</h2>
-    <form>
-      <div class="mb-3">
-        <label for="nama" class="form-label">Nama</label>
-        <input type="text" class="form-control" id="nama" required>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" required>
-      </div>
-      <div class="mb-3">
-        <label for="pesan" class="form-label">Pesan</label>
-        <textarea class="form-control" id="pesan" rows="3"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Kirim</button>
-    </form>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="text-center py-4 bg-dark text-light">
-  <p>&copy; 2025 Katering Nusantara. Semua hak dilindungi.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
